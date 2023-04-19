@@ -3,7 +3,7 @@ package com.pgrsoft.cajondesastre.modelogeometrico;
 public class Triangulo extends Poligono {
 		
 	public Triangulo(Punto verticeA, Punto verticeB, Punto verticeC) {
-		super(verticeA, verticeB, verticeC);	
+		super(verticeA, verticeB, verticeC);
 	}
 
 	public Punto getVerticeA() {

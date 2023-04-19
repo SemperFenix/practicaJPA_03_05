@@ -25,7 +25,7 @@ public abstract class Poligono implements Figura{
 		
 		double perimetro = 0.0;
 		
-		//TODO 
+		//TODO el calculo se lleva a cabo a partir de los verices. Distancia del 0 al 1, del 1 al 2, ... del ultimo al primero
 		
 		return perimetro;
 	}

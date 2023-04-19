@@ -2,10 +2,9 @@ package com.pgrsoft.cajondesastre.modelogeometrico;
 
 public class Cuadrado extends Poligono {
 
-	// TODO Hemos de tomar la decisión de cómo construir un cuadrado.
-	// Hemos de pasarle los cuatro vértices? Si es así...¿debemos comprobar que los vértices forman un cuadrado?
-	// Podemos pasarle un vértice y un lado? En ese caso, ¿Cómo calculamos los vértices restantes?
-	public Cuadrado() {
+	// TODO 
+	
+	public Cuadrado(Punto v1, Punto v2, Punto v3, Punto v4) {
 		super(null);
 		
 		// TODO
