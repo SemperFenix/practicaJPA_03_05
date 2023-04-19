@@ -2,6 +2,7 @@ package com.pgrsoft.cajondesastre.modelogeometrico.test;
 
 import com.pgrsoft.cajondesastre.modelogeometrico.Circulo;
 import com.pgrsoft.cajondesastre.modelogeometrico.Figura;
+import com.pgrsoft.cajondesastre.modelogeometrico.Poligono;
 import com.pgrsoft.cajondesastre.modelogeometrico.Punto;
 import com.pgrsoft.cajondesastre.modelogeometrico.Triangulo;
 
@@ -79,16 +80,30 @@ public class TestClass {
 		
 		// **************** Demostración de polimorfismo ******************+
 		
-		
 		Figura[] figuras = {circulo1, triangulo, circulo2};
 		
-		System.out.println("\n************** DEMO POLIMORFISMO ********************\n");
+		System.out.println("\n************** DEMO POLIMORFISMO CON FIGURAS ********************\n");
 		
 		for(Figura figura: figuras) {
 			figura.trasladar(10.0, -2.0);
 			System.out.println(figura.getArea());
 			System.out.println(figura.getPerimetro() + "\n");
 		}
+		
+		// **************** Otra demostración de polimorfismo con la figura del Poligono ********
+		
+		System.out.println("\n************** DEMO POLIMORFISMO CON POLIGONOS ********************\n");
+		
+		// En este array de polígonos hemos de colocar algún cuadrado....
+		
+		Poligono[] poligonos = {triangulo};
+		
+		for(Poligono poligono: poligonos) {
+			System.out.println("Area del poligono: " + poligono.getArea());
+			System.out.println("Perímetro del polígono: " + poligono.getPerimetro());
+		}
+		
+		
 		
 		
 	}
