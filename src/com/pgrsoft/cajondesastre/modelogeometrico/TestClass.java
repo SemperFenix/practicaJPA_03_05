@@ -34,7 +34,7 @@ public class TestClass {
 		System.out.println(circulo2);
 		System.out.println(circulo3);
 		
-		// Pruebas de getPerimetro(), getArea() y trasladar()
+		// Pruebas de getPerimetro(), getArea() y trasladar() con círculos
 		
 		double perimetroCirculo1 = circulo1.getPerimetro();
 		double perimetroCirculo2 = circulo2.getPerimetro();

@@ -21,22 +21,15 @@ public class Circulo {
 	}
 	
 	public void trasladar(double deltaX, double deltaY) {
-		
-		// TODO
+		centro.trasladar(deltaX, deltaY);
 	}
 	
 	public double getPerimetro() {
-		
-		// TODO
-		
-		return 0.0;
+		return 2 * Math.PI * radio;
 	}
 	
 	public double getArea() {
-		
-		// TODO
-		
-		return 0.0;
+		return Math.PI * Math.pow(radio, 2);
 	}
 
 	public Punto getCentro() {
@@ -51,6 +44,4 @@ public class Circulo {
 		return "Centro " + this.centro + " Radio: " + this.radio;
 	}
 	
-
 }
-
