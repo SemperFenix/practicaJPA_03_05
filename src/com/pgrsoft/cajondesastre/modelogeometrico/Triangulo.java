@@ -1,9 +1,16 @@
 package com.pgrsoft.cajondesastre.modelogeometrico;
 
+import java.util.Arrays;
+
 public class Triangulo extends Poligono {
 		
-	public Triangulo(Punto verticeA, Punto verticeB, Punto verticeC) {
-		super(verticeA, verticeB, verticeC);
+	public Triangulo(Punto v1, Punto v2, Punto v3) {
+		super(new Punto[] {v1, v2, v3});
+		
+		if(v1.equals(v2) || v1.equals(v3) || v2.equals(v3)) {
+			throw new IllegalArgumentException("Los tres vértices aportados no forman un triángulo.");
+		}
+		
 	}
 
 	public Punto getVerticeA() {
@@ -26,10 +33,10 @@ public class Triangulo extends Poligono {
                                          (semiperimetro - vertices[1].getDistancia(vertices[2])) * 
                                          (semiperimetro - vertices[2].getDistancia(vertices[0])));
 	}
-		
+
 	@Override
 	public String toString() {
-		return "Triangulo [verticeA=" + vertices[0] + ", verticeB=" + vertices[1] + ", verticeC=" + vertices[2] + "]";
+		return "Triangulo [vertices=" + Arrays.toString(vertices) + "]";
 	}
-	
+
 }

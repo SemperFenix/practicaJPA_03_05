@@ -1,6 +1,7 @@
 package com.pgrsoft.cajondesastre.modelogeometrico.test;
 
 import com.pgrsoft.cajondesastre.modelogeometrico.Circulo;
+import com.pgrsoft.cajondesastre.modelogeometrico.Cuadrado;
 import com.pgrsoft.cajondesastre.modelogeometrico.Figura;
 import com.pgrsoft.cajondesastre.modelogeometrico.Poligono;
 import com.pgrsoft.cajondesastre.modelogeometrico.Punto;
@@ -78,33 +79,41 @@ public class TestClass {
 		
 		System.out.println(triangulo);
 		
-		// **************** Demostración de polimorfismo ******************+
-		
-		Figura[] figuras = {circulo1, triangulo, circulo2};
-		
-		System.out.println("\n************** DEMO POLIMORFISMO CON FIGURAS ********************\n");
-		
-		for(Figura figura: figuras) {
-			figura.trasladar(10.0, -2.0);
-			System.out.println(figura.getArea());
-			System.out.println(figura.getPerimetro() + "\n");
-		}
-		
 		// **************** Otra demostración de polimorfismo con la figura del Poligono ********
 		
-		System.out.println("\n************** DEMO POLIMORFISMO CON POLIGONOS ********************\n");
+		System.out.println("\n************** POLIMORFISMO CON POLIGONOS ********************\n");
 		
 		// En este array de polígonos hemos de colocar algún cuadrado....
 		
-		Poligono[] poligonos = {triangulo};
+		Cuadrado cuadrado = new Cuadrado(new Punto(0.0,0.0), new Punto(5.0, 0.0), new Punto(5.0, 5.0), new Punto(0.0, 5.0));   
+		
+		Poligono[] poligonos = {triangulo, cuadrado};
 		
 		for(Poligono poligono: poligonos) {
 			System.out.println("Area del poligono: " + poligono.getArea());
 			System.out.println("Perímetro del polígono: " + poligono.getPerimetro());
 		}
 		
+		// **************** Demostración TOTAL de polimorfismo ******************+
 		
+		Poligono poligono1 = new Triangulo(new Punto(0.0, 0.0), new Punto(10.0, 0.0), new Punto(0.0, 10.0));
+		Poligono poligono2 = new Cuadrado(new Punto(0.0, 0.0), new Punto(10.0, 0.0), new Punto(10.0, 10.0), new Punto(0.0, 10.0));
+		Circulo  circulo   = new Circulo(new Punto(0.0, 0.0), 100.0);
+		Figura   fig1      = new Cuadrado(new Punto(0, 0), new Punto(1, 0), new Punto(1, 1), new Punto(0, 1));
+		Figura   fig2      = new Cuadrado(new Punto(0, 0), new Punto(10, 0), new Punto(10, 10), new Punto(0, 10));
+		Cuadrado cuadrado1 = new Cuadrado(new Punto(0, 0), new Punto(15, 0), new Punto(15, 15), new Punto(0, 15));
 		
+		Figura[] figuras = {poligono1, poligono2, circulo, fig1, fig2, cuadrado1};
+				
+		System.out.println("\n************** DEMO TOTAL!  POLIMORFISMO CON FIGURAS ********************\n");
+				
+		for(Figura figura: figuras) {
+
+			System.out.println("TIPO DE FIGURA: " + figura.getClass().getSimpleName());
+			System.out.println("AREA:           " + figura.getArea());
+			System.out.println("PERIMETRO:      " + figura.getPerimetro() + "\n");
+			figura.trasladar(10.0, -2.0);
+		}
 		
 	}
 

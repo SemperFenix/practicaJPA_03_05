@@ -4,10 +4,6 @@ public abstract class Poligono implements Figura{
 
 	protected Punto[] vertices;
 	
-	public Poligono(Punto v1, Punto v2, Punto v3) {
-		vertices = new Punto[] {v1, v2, v3};
-	}
-	
 	public Poligono(Punto[] vertices) {
 		
 		if(vertices.length < 3) {
@@ -25,7 +21,13 @@ public abstract class Poligono implements Figura{
 		
 		double perimetro = 0.0;
 		
-		//TODO el calculo se lleva a cabo a partir de los verices. Distancia del 0 al 1, del 1 al 2, ... del ultimo al primero
+		int numeroVertices = vertices.length;
+		
+		for(int i = 0; i < numeroVertices -1; i++) {
+			perimetro += vertices[i].getDistancia(vertices[i + 1]);
+		}
+		
+		perimetro += vertices[numeroVertices - 1].getDistancia(vertices[0]);
 		
 		return perimetro;
 	}
