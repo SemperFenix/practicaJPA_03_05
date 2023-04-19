@@ -1,4 +1,9 @@
-package com.pgrsoft.cajondesastre.modelogeometrico;
+package com.pgrsoft.cajondesastre.modelogeometrico.test;
+
+import com.pgrsoft.cajondesastre.modelogeometrico.Circulo;
+import com.pgrsoft.cajondesastre.modelogeometrico.Figura;
+import com.pgrsoft.cajondesastre.modelogeometrico.Punto;
+import com.pgrsoft.cajondesastre.modelogeometrico.Triangulo;
 
 public class TestClass {
 
@@ -49,7 +54,42 @@ public class TestClass {
 		
 		circulo1.trasladar(100.0, 100.0);
 		
+		circulo1.saluda();
+		
 		System.out.println("Nueva posición de circulo1: " + circulo1);
+		
+		Punto vertice1 = new Punto(0.0, 0.0);
+		Punto vertice2 = new Punto(5.0, 0.0);
+		Punto vertice3 = new Punto(0.0, 5.0);
+			
+		Triangulo triangulo = new Triangulo(vertice1, vertice2, vertice3);
+		
+		double areaTriangulo = triangulo.getArea();
+		double perimetroTriangulo = triangulo.getPerimetro();
+		
+		System.out.println("Área del triángulo: " + areaTriangulo);
+		System.out.println("Perímetro del triángulo " + perimetroTriangulo);
+		
+		System.out.println(triangulo);
+		
+		triangulo.getVerticeA().setX(100000000.0);
+		triangulo.getVerticeA().setY(-10000000.0);
+		
+		System.out.println(triangulo);
+		
+		// **************** Demostración de polimorfismo ******************+
+		
+		
+		Figura[] figuras = {circulo1, triangulo, circulo2};
+		
+		System.out.println("\n************** DEMO POLIMORFISMO ********************\n");
+		
+		for(Figura figura: figuras) {
+			figura.trasladar(10.0, -2.0);
+			System.out.println(figura.getArea());
+			System.out.println(figura.getPerimetro() + "\n");
+		}
+		
 		
 	}
 

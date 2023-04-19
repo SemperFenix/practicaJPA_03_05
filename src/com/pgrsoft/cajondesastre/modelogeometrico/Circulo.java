@@ -1,9 +1,13 @@
 package com.pgrsoft.cajondesastre.modelogeometrico;
 
-public class Circulo {
+public class Circulo implements Figura{
 	
 	private Punto centro; 
 	private double radio; 
+	
+	public void saluda() {
+		System.out.println("Hola! soy un circulo! Buenas!");
+	}
 	
 	public Circulo(double radio) {
 		this.centro = new Punto(0.0, 0.0);
