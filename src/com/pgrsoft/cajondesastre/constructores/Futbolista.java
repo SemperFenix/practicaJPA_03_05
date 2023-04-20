@@ -10,5 +10,7 @@ public class Futbolista extends Deportista {
 		System.out.println("Futbolista en fase de construcción");
 	}
 	
+	
+	
 }
 

@@ -55,9 +55,7 @@ public class TestClass {
 		System.out.println("área del circulo2: " + areaCirculo2);
 		
 		circulo1.trasladar(100.0, 100.0);
-		
-		circulo1.saluda();
-		
+				
 		System.out.println("Nueva posición de circulo1: " + circulo1);
 		
 		Punto vertice1 = new Punto(0.0, 0.0);

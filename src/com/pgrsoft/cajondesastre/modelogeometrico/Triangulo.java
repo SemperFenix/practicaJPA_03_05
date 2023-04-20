@@ -13,6 +13,16 @@ public class Triangulo extends Poligono {
 		
 	}
 
+	@Override
+	public double getArea() {
+		
+		double semiperimetro= this.getPerimetro() / 2;
+
+        return Math.sqrt(semiperimetro * (semiperimetro - vertices[0].getDistancia(vertices[1])) * 
+                                         (semiperimetro - vertices[1].getDistancia(vertices[2])) * 
+                                         (semiperimetro - vertices[2].getDistancia(vertices[0])));
+	}
+
 	public Punto getVerticeA() {
 		return vertices[0];
 	}
@@ -25,15 +35,6 @@ public class Triangulo extends Poligono {
 		return vertices[2];
 	}
 	
-	public double getArea() {
-		
-		double semiperimetro= this.getPerimetro() / 2;
-
-        return Math.sqrt(semiperimetro * (semiperimetro - vertices[0].getDistancia(vertices[1])) * 
-                                         (semiperimetro - vertices[1].getDistancia(vertices[2])) * 
-                                         (semiperimetro - vertices[2].getDistancia(vertices[0])));
-	}
-
 	@Override
 	public String toString() {
 		return "Triangulo [vertices=" + Arrays.toString(vertices) + "]";

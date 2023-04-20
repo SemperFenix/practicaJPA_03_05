@@ -14,9 +14,6 @@ public abstract class Poligono implements Figura{
 	}
 	
 	@Override
-	public abstract double getArea();
-
-	@Override
 	public double getPerimetro() {
 		
 		double perimetro = 0.0;

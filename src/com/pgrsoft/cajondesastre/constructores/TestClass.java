@@ -4,7 +4,10 @@ public class TestClass {
 
 	public static void main(String[] args) {
 		
-		new DelanteroCentro();
+		Futbolista futbolista = new Futbolista();
+		
+		futbolista.calentar();
+		
 	}
 
 }

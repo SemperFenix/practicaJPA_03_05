@@ -19,6 +19,13 @@ public class Punto {
 	
 	public double getDistancia(Punto otro) {
 	
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+		}
+		
+		System.out.println(System.currentTimeMillis());
+		
 		return Math.sqrt(Math.pow((otro.x - x), 2) +  Math.pow((otro.y - y), 2));
 	}
 	

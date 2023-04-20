@@ -5,10 +5,6 @@ public class Circulo implements Figura{
 	private Punto centro; 
 	private double radio; 
 	
-	public void saluda() {
-		System.out.println("Hola! soy un circulo! Buenas!");
-	}
-	
 	public Circulo(double radio) {
 		this.centro = new Punto(0.0, 0.0);
 		this.radio = radio;
@@ -24,16 +20,16 @@ public class Circulo implements Figura{
 		this.radio = radio;	
 	}
 	
-	public void trasladar(double deltaX, double deltaY) {
-		centro.trasladar(deltaX, deltaY);
-	}
-	
 	public double getPerimetro() {
 		return 2 * Math.PI * radio;
 	}
 	
 	public double getArea() {
 		return Math.PI * Math.pow(radio, 2);
+	}
+	
+	public void trasladar(double deltaX, double deltaY) {
+		centro.trasladar(deltaX, deltaY);
 	}
 
 	public Punto getCentro() {
