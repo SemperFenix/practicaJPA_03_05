@@ -1,0 +1,10 @@
+snippet
+boilerplate
+POJO
+enterprise
+Java SE
+Java EE
+business key
+surrogate key
+refactorizar
+oneliner
