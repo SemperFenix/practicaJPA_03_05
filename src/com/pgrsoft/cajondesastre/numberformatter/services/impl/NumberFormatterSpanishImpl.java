@@ -68,6 +68,10 @@ public class NumberFormatterSpanishImpl implements NumberFormatter {
 	
 	@Override
 	public String convert(int numero) {
+			
+		if(numero < 0 || numero > 999) {
+			throw new IllegalArgumentException("El número " + numero + " está fuera de rango. Sólo se admiten números entre [0..999]");
+		}
 		
 		if(numero == 100) {
 			return "cien";
@@ -92,6 +96,7 @@ public class NumberFormatterSpanishImpl implements NumberFormatter {
 		}
 		
 		return resultado.trim();
+		
 	}
 
 }
