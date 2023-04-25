@@ -37,7 +37,7 @@ public class GroupsGeneratorImpl implements GroupsGenerator{
 		// Distribución miembros sobrantes
 		
 		for(int i = 0 ; i < NUMERO_MIEMBROS_SOBRANTES; i++) {
-			resultadoParcial.get(i).add(membersList.get(groupSize * NUMERO_GRUPOS + i));
+			resultadoParcial.get(NUMERO_GRUPOS == 1 ? 0 : i).add(membersList.get(groupSize * NUMERO_GRUPOS + i));
 		}
 		
 		// Conversión a formato definitivo

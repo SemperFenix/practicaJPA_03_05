@@ -2,7 +2,10 @@ package com.pgrsoft.cajondesastre.conceptosbasicos;
 
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.Date;
+import java.util.LinkedList;
+import java.util.List;
 
 @SuppressWarnings({"unused", "removal"})
 class TestClass {
@@ -17,6 +20,29 @@ class TestClass {
 		demoConversion();
 		demoStringMethods();
 		demoBasicOperations();
+		demoLinkedList();
+		
+	}
+	
+	private static void demoLinkedList() {
+		
+		LinkedList<String> miembros = new LinkedList<>();
+		
+		miembros.add("a");
+		miembros.add("b");
+		miembros.add("c");
+		miembros.add("d");
+		
+		System.out.println(miembros);
+		
+		Collections.shuffle(miembros);
+		
+		// Métodos pop() y push() perfectos para trabajar con una pila (LIFO)
+		
+		while(!miembros.isEmpty()) {
+			String miembro = miembros.pop();
+			System.out.println(miembro);
+		}
 		
 	}
 	
