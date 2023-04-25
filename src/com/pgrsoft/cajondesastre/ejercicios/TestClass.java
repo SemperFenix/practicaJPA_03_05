@@ -9,8 +9,8 @@ public class TestClass {
 		
 		// Método1
 		
-		System.out.println("47822312R"); 
-		System.out.println("67343L");
+		System.out.println(ejercicios.validarDNI("45432212P")); 
+		System.out.println(ejercicios.validarDNI("344R"));
 		
 		
 		// Método2

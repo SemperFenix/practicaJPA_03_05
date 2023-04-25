@@ -5,6 +5,9 @@ public class EjerciciosImpl implements Ejercicios {
 	@Override
 	public boolean validarDNI(String dni) {
 		// TODO Auto-generated method stub
+		
+		
+		StringBuilder sb;
 		return false;
 	}
 
