@@ -8,3 +8,4 @@ business key
 surrogate key
 refactorizar
 oneliner
+KISS

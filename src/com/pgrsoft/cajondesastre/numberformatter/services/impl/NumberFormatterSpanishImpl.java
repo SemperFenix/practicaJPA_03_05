@@ -6,6 +6,7 @@ import java.util.HashMap;
 
 public class NumberFormatterSpanishImpl implements NumberFormatter {
 
+	/*
 	private static final Map<Integer, String> UNIDADES = new HashMap<>();
 	private static final Map<Integer, String> DECENAS = new HashMap<>();
 	private static final Map<Integer, String> CENTENAS = new HashMap<>();
@@ -66,9 +67,11 @@ public class NumberFormatterSpanishImpl implements NumberFormatter {
 		EXCEPCIONES.put(29, "veintinueve");
 	}
 	
+	*/
+	
 	@Override
 	public String convert(int numero) {
-			
+		/*	
 		if(numero < 0 || numero > 999) {
 			throw new IllegalArgumentException("El número " + numero + " está fuera de rango. Sólo se admiten números entre [0..999]");
 		}
@@ -96,6 +99,10 @@ public class NumberFormatterSpanishImpl implements NumberFormatter {
 		}
 		
 		return resultado.trim();
+		
+		*/
+		
+		return null;
 		
 	}
 
