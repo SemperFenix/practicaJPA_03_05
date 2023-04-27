@@ -72,20 +72,43 @@ FROM     PERSONAS
 WHERE 	 LENGTH(APELLIDO1) = LENGTH(APELLIDO2)
 ORDER BY LENGTH(APELLIDO1) DESC
 
--- Filtro IN
+-- Filtro IN (para evitar GENDER = 'A' OR GENDER = 'B' OR GENDER = 'C')
 
+SELECT  * 
+FROM     PERSONAS
+WHERE  GENDER IN ('Female', 'Male', 'Bigender');     
+             
+-- Filtro BETWEEN (para evitar SALARIO >= 1000 AND SALARIO <= 5000)
 
--- Filtro BETWEEN
+SELECT SALARIO
+FROM PERSONAS 
+WHERE SALARIO BETWEEN 4431.63 AND 5000.00
+ORDER BY SALARIO
 
+-- Filtro IS NULL (tmbién se puede preguntar por los que no son null: IS NOT NULL)
 
--- Filtro IS NULL
+SELECT * FROM PERSONAS
+WHERE APELLIDO2 IS NULL
 
+-- Group BY (GENDER es una columna interesante para agrupas los datos y extraer conclusiones)
 
--- Group BY
+SELECT  GENDER,
+        COUNT(*)     AS NUMERO_PERSONAS,
+        MAX(SALARIO) AS SALARIO_MAXIMO,
+        MIN(SALARIO) AS SALARIO_MINIMO,
+        AVG(SALARIO) AS SALARIO_MEDIO
+FROM    PERSONAS
+GROUP BY GENDER ORDER BY GENDER
 
+-- Obtención de datos estadísticos generales
+
+SELECT  COUNT(*)     AS NUMERO_PERSONAS_TOTAL,
+        MAX(SALARIO) AS SALARIO_MAXIMO,
+        MIN(SALARIO) AS SALARIO_MINIMO,
+        AVG(SALARIO) AS SALARIO_MEDIO
+FROM PERSONAS
 
 -- Inserción de datos
-
 
 -- Eliminación de datos
 
